@@ -13,6 +13,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hello Memories!')
+});
+
 const CONNECTION_URL = 'mongodb+srv://practiceDb:AU43xl1Kwn0Q0G9t@cluster0.cmkkz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
